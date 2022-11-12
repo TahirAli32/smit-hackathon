@@ -28,7 +28,132 @@ input{
 
 /* <-------- Homepage Styling Starts --------> */
 
-
+/* Header */
+nav{
+    height: 10vh;
+    background-color: #252D4A;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+.logoutBtn{
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 18px;
+    background-color: #7CC6FE;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #234668;
+    transition: all 0.5s;
+}
+.logoutBtn:hover{
+    color: #fff;
+}
+.home{
+    height: 90vh;
+    background-color: #fff !important;
+    display: flex;
+    flex-direction: row;
+    flex: 10;
+}
+.sidebar{
+    border-top: 1px solid #464d69;
+    color: #fff;
+    background-color: #252D4A;
+    height: 100%;
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.sidebarWrapper{
+    overflow-y: auto;
+}
+.sidebarmenu{
+    display: flex;
+    align-items: center;
+    background-color: #32374b;
+    margin-block: 5px;
+    padding-block: 20px;
+    font-size: 18px;
+    justify-content: space-around;
+    cursor: pointer;
+    transition: all 0.7s;
+}
+.sidebarmenu:hover{
+    background-color: #3c94ec;
+}
+.icon{
+    
+    margin-left: 30px;
+    width: 50px;
+}
+.sidebarmenu > h3{
+    width: 100%;
+    font-weight: 600;
+}
+.toggle{
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 15px;
+    cursor: pointer;
+}
+.main{
+    flex: 7;
+    height: 100%;
+}
+#createUser, #manageAttendance, #viewStudents{
+    display: none;
+}
+.newform{
+    display: flex;
+    flex-direction: column;
+    margin: 25px 0 0 25px;
+    width: 80%;
+}
+.row{
+    display: flex;
+}
+.marginLeft{
+    margin-left: 5px;
+}
+.row > .inputField{
+    border-radius: 5px;
+    border: 0.1rem solid #d6d4d4
+}
+.row > .inputField:focus, .row > .inputField:hover{
+    border-color: #3c94ec;
+}
+.newform > h2{
+    color: #252D4A;
+}
+.formContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px ;
+    height: 80%;
+}
+.btn2{
+    background-color: #252D4A;
+    padding: 13px;
+    margin-top: 5px;
+    width: 100%;
+    cursor: pointer;
+    border-color: red;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: all .5s;
+    text-align: center;
+}
+.btn2:hover{
+    background-color: #fff;
+    color: #252D4A;
+    border: 1px solid #252D4A;
+}
 /* <-------- Homepage Styling Ends --------> */
 
 
@@ -99,6 +224,7 @@ input{
     cursor: pointer;
     margin-top: 10px;
     width: 50%;
+    text-align: center;
 }
 .formBtn:hover{
     border-color: #234668;

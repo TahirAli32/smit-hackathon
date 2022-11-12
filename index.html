@@ -3,10 +3,89 @@
 <head>
     <title>Home</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/fc97e4356e.js" defer crossorigin="anonymous"></script>
     <script type="module" src="script.js" defer></script>
 </head>
 <body>
-    <h1>Home</h1>
-    <a href="./login.html">Login</a>
+    <a class="absolute" href="./login.html">Login</a>
+    <nav>
+        <h2>
+            SMIT Admin Portal
+        </h2>
+        <p class="logoutBtn" id="logout" onclick="handleLogout()">Logout</p>
+    </nav>
+    <div class="container home">
+        <div class="sidebar">
+            <div class="sidebarWrapper">
+                <div class="sidebarmenu" id="createClassTab">
+                    <span class="icon"><i class="fa-solid fa-users"></i></span>
+                    <h3>Create Class</h3>
+                </div>
+                <div class="sidebarmenu" id="createUserTab">
+                    <span class="icon"><i class="fa-solid fa-user-plus"></i></span>
+                    <h3>Add Student</h3>
+                </div>
+                <div class="sidebarmenu" id="manageAttendanceTab">
+                    <span class="icon"><i class="fa-solid fa-clipboard-user"></i></span>
+                    <h3>Attendence</h3>
+                </div>
+                <div class="sidebarmenu" id="viewStudentsTab">
+                    <span class="icon"><i class="fa-solid fa-users-between-lines"></i></span>
+                    <h3>View Students</h3>
+                </div>
+            </div>
+            <div class="toggle">Toggle Sidebar</div>
+        </div>
+        <div class="main">
+            <div id="createClass" class="formContainer">
+                <div class="newform">
+                    <h2>Create Class</h2>
+                    <div class="row">
+                        <input type="text" id="classTiming" class="inputField" placeholder="Class Timing">
+                        <input type="text" id="classSchedule" class="inputField marginLeft" placeholder="Schedule of Class">
+                    </div>
+                    <div class="row">
+                        <input type="text" id="classTeacher" class="inputField" placeholder="Teacher Name">
+                        <input type="text" id="section" class="inputField marginLeft" placeholder="Section">
+                    </div>
+                    <div class="row">
+                        <input type="text" id="courseName" class="inputField" placeholder="Course Name">
+                        <input type="number" id="batchNo" class="inputField marginLeft" placeholder="Batch Number">
+                    </div>
+                    <div class="row">
+                        <div id="createClassForm" class="btn2">Create Class</div>
+                    </div>
+                </div>
+            </div>
+            <div id="createUser" class="formContainer">
+                <div class="newform">
+                    <h2>Add Student</h2>
+                    <div class="row">
+                        <input type="text" id="stdName" class="inputField" placeholder="Name">
+                        <input type="text" id="fName" class="inputField marginLeft" placeholder="Father Name">
+                    </div>
+                    <div class="row">
+                        <input type="number" id="rollNo" class="inputField" placeholder="Roll Number">
+                        <input type="number" id="contactNo" class="inputField marginLeft" placeholder="Contact Number">
+                    </div>
+                    <div class="row">
+                        <input type="number" id="cnic" class="inputField" placeholder="CNIC Number">
+                        <label style="margin: 0 5px;" for="stdCourse">Choose Course:</label>
+                        <select class="inputField" id="stdCourse">
+                         <!-- Data injected by JS -->
+                        </select>
+                    </div>
+                    <div class="row">
+                        <input type="file" id="profilePic" accept=".png" class="inputField">
+                    </div>
+                    <div class="row">
+                        <div id="createUserForm" class="btn2">Add Student</div>
+                    </div>
+                </div>
+            </div>
+            <div id="manageAttendance" class="formContainer">Attendence</div>
+            <div id="viewStudents" class="formContainer">students</div>
+        </div>
+    </div>
 </body>
 </html>
