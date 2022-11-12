@@ -1,0 +1,120 @@
+/* <-------- Global Styles and Variables Starts --------> */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.container{
+    height: 100vh;
+}
+input{
+    outline: none;
+    border: none;
+}
+
+/* <-------- Global Styles and Variables Ends --------> */
+
+
+/* <-------- Homepage Styling Starts --------> */
+
+
+/* <-------- Homepage Styling Ends --------> */
+
+
+
+
+/* <-------- Auth Page Styling Starts --------> */
+
+/* 
+7CC6FE  light
+252D4A dark
+ */
+
+.absolute{
+    position: absolute;
+    right: 0;
+    color: red;
+    font-weight: 600;
+    margin-top: 50px;
+    margin-right: 50px;
+}
+.container{
+    background-color: #7cc6fe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5efef;
+    border-radius: 10px;
+    box-shadow: 10px 10px 55px 0px rgb(0 0 0 / 25%);
+    width: 500px;
+    height: 500px;
+}
+.authHeading{
+    margin-bottom: 20px;
+    color: #234668;
+}
+.form{
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+.inputField{
+    font-size: 16px;
+    color: #234668;
+    padding: 10px;
+    width: 100%;
+    margin-block: 5px;
+    border: 2px solid #76ade4;
+}
+.inputField:focus{
+    border-bottom-color: #234668;
+}
+.formBtn{
+    border: 2px solid #76ade4;
+    color: #000;
+    background-color: #fff;
+    padding: 10px 15px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 50%;
+}
+.formBtn:hover{
+    border-color: #234668;
+}
+.changeAuth{
+    border-top: 0.1rem solid #5b7df850;
+    margin-top: 2rem;
+    text-align: center;
+    padding-top: 1rem;
+    color: #76ade4;
+}
+.changeAuth span {
+    color: #3c94ec;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+/* <-------- Auth Page Styling Ends --------> */
