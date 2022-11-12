@@ -95,8 +95,8 @@ createClassForm?.addEventListener('click', async () => {
     console.log('class created')
 })
 
-const fetchClass = async () => {
-    const q = query(collection(db, "classes"))
+const fetchData = async (data) => {
+    const q = query(collection(db, data))
     let arr = []
     const querySnapshot = await getDocs(q)
     querySnapshot.forEach(doc => {
@@ -178,15 +178,34 @@ function changeDisplay (showDiv){
 }
 
 createClassTab?.addEventListener('click', () => changeDisplay('createClass'))
+
 createUserTab?.addEventListener('click', async () => {
     changeDisplay('createUser')
-    let allClasses = await fetchClass()
+    let allClasses = await fetchData("classes")
     let stdCourse = document.getElementById('stdCourse')
     let str = ""
-    allClasses.forEach((e,i)=>{
+    allClasses.forEach((e)=>{
         str += `<option value="${e.courseName} by ${e.classTeacher}">${e.courseName} by ${e.classTeacher}</option>`
     })
     stdCourse.innerHTML = str
 })
+
 manageAttendanceTab?.addEventListener('click', () => changeDisplay('manageAttendance'))
-viewStudentsTab?.addEventListener('click', () => changeDisplay('viewStudents'))
+
+viewStudentsTab?.addEventListener('click', async () => {
+    changeDisplay('viewStudents')
+    let table = document.getElementById('table')
+    let allUsers = await fetchData("users")
+    allUsers.forEach((e)=>{
+        table.innerHTML += `
+            <tr>
+                <td>${e.stdName}</td>
+                <td>${e.fName}</td>
+                <td>${e.rollNo}</td>
+                <td>${e.contactNo}</td>
+                <td>${e.stdCourse}</td>
+                <td>${e.cnic}</td>
+            </tr>
+        `
+    })
+})

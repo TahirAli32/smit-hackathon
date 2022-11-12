@@ -7,7 +7,6 @@
     <script type="module" src="script.js" defer></script>
 </head>
 <body>
-    <a class="absolute" href="./login.html">Login</a>
     <nav>
         <h2>
             SMIT Admin Portal
@@ -83,8 +82,23 @@
                     </div>
                 </div>
             </div>
-            <div id="manageAttendance" class="formContainer">Attendence</div>
-            <div id="viewStudents" class="formContainer">students</div>
+            <div id="manageAttendance" class="formContainer">
+                
+            </div>
+            <div id="viewStudents" class="formContainer" style="display: flex; flex-direction: column;">
+                <h3>All Students</h3>
+                <table id="table">
+                    <tr>
+                        <th>Name</th>
+                        <th>Father Name</th>
+                        <th>Roll No</th>
+                        <th>Contact</th>
+                        <th>Course</th>
+                        <th>CNIC</th>
+                    </tr>
+
+                </table>
+            </div>
         </div>
     </div>
 </body>

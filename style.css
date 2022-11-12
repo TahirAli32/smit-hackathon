@@ -166,14 +166,6 @@ nav{
 252D4A dark
  */
 
-.absolute{
-    position: absolute;
-    right: 0;
-    color: red;
-    font-weight: 600;
-    margin-top: 50px;
-    margin-right: 50px;
-}
 .container{
     background-color: #7cc6fe;
     display: flex;
@@ -195,6 +187,16 @@ nav{
     margin-bottom: 20px;
     color: #234668;
 }
+th{
+    padding: 5px;
+    border: .065rem solid #464d69;
+}
+td{
+    padding: 5px;
+    border: .065rem solid #a2a7bd;
+    background-color: rgba(168, 168, 168, 0.13);
+}
+
 .form{
     padding: 0 15px;
     display: flex;
