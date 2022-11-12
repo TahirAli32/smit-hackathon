@@ -164,9 +164,10 @@ let createClassTab = document.getElementById('createClassTab')
 let createUserTab = document.getElementById('createUserTab')
 let manageAttendanceTab = document.getElementById('manageAttendanceTab')
 let viewStudentsTab = document.getElementById('viewStudentsTab')
+let viewClassesTab = document.getElementById('viewClassesTab')
 
 function changeDisplay (showDiv){
-    let arr = ['createClass', 'createUser', 'manageAttendance', 'viewStudents']
+    let arr = ['createClass', 'createUser', 'manageAttendance', 'viewStudents', 'viewClasses']
     for(const eachDiv of arr){
         if(eachDiv === showDiv){
             document.getElementById(showDiv).style.display = "flex"
@@ -194,7 +195,7 @@ manageAttendanceTab?.addEventListener('click', () => changeDisplay('manageAttend
 
 viewStudentsTab?.addEventListener('click', async () => {
     changeDisplay('viewStudents')
-    let table = document.getElementById('table')
+    let table = document.getElementById('user-table')
     let allUsers = await fetchData("users")
     allUsers.forEach((e)=>{
         table.innerHTML += `
@@ -205,6 +206,25 @@ viewStudentsTab?.addEventListener('click', async () => {
                 <td>${e.contactNo}</td>
                 <td>${e.stdCourse}</td>
                 <td>${e.cnic}</td>
+            </tr>
+        `
+    })
+})
+
+viewClassesTab?.addEventListener('click', async () => {
+    changeDisplay('viewClasses')
+    let table = document.getElementById('class-table')
+    let allClasses = await fetchData("classes")
+    // console.log(allClasses);
+    allClasses.forEach((e)=>{
+        table.innerHTML += `
+            <tr>
+                <td>${e.courseName}</td>
+                <td>${e.classTeacher}</td>
+                <td>${e.classTiming}</td>
+                <td>${e.batchNo}</td>
+                <td>${e.classSchedule}</td>
+                <td>${e.section}</td>
             </tr>
         `
     })

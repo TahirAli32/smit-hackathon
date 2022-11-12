@@ -32,8 +32,11 @@
                     <span class="icon"><i class="fa-solid fa-users-between-lines"></i></span>
                     <h3>View Students</h3>
                 </div>
+                <div class="sidebarmenu" id="viewClassesTab">
+                    <span class="icon"><i class="fa-solid fa-users-between-lines"></i></span>
+                    <h3>View Classes</h3>
+                </div>
             </div>
-            <div class="toggle">Toggle Sidebar</div>
         </div>
         <div class="main">
             <div id="createClass" class="formContainer">
@@ -83,11 +86,11 @@
                 </div>
             </div>
             <div id="manageAttendance" class="formContainer">
-                
+                attendence page coming soon
             </div>
             <div id="viewStudents" class="formContainer" style="display: flex; flex-direction: column;">
                 <h3>All Students</h3>
-                <table id="table">
+                <table id="user-table">
                     <tr>
                         <th>Name</th>
                         <th>Father Name</th>
@@ -96,7 +99,19 @@
                         <th>Course</th>
                         <th>CNIC</th>
                     </tr>
-
+                </table>
+            </div>
+            <div id="viewClasses" class="formContainer" style="display: flex; flex-direction: column;">
+                <h3>All Classes</h3>
+                <table id="class-table">
+                    <tr>
+                        <th>Course Name</th>
+                        <th>Class Teacher</th>
+                        <th>Class Timing</th>
+                        <th>Batch No</th>
+                        <th>Class Schedule</th>
+                        <th>Section</th>
+                    </tr>
                 </table>
             </div>
         </div>
